@@ -1,0 +1,12 @@
+version: '3'
+services:
+  socat-container:
+    image: alpine/socat
+    container_name: alpine_agent
+    command: "tcp-listen:2375,fork,reuseaddr unix-connect:/var/run/docker.sock"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 2376:2375
+    restart: always
+

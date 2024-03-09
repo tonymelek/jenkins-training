@@ -1,0 +1,14 @@
+{
+  "name": "jenkins-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "sudo docker-compose up",
+    "stop": "sudo docker-compose down",
+    "start:agent": "sudo docker-compose -f docker-compose-agent.yml up"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

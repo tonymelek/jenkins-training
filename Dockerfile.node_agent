@@ -1,0 +1,5 @@
+FROM jenkins/agent:latest-alpine-jdk11
+USER root
+RUN apk update && apk add nodejs npm docker docker-compose
+RUN git config --global user.name "Jenkins Agent"
+RUN git config --global user.email "jenkins@jenkins.com"

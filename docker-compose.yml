@@ -1,0 +1,20 @@
+version: '3'
+volumes:
+  jenkins-data:
+  jenkins-docker-certs:
+services:
+  jenkins:
+    image: jenkins-local:latest
+    container_name: jenkins_server_container
+    restart: on-failure
+    ports:
+      - 8080:8080
+      - 50000:50000
+    environment:
+      - DOCKER_CERT_PATH:"/certs/client"
+      - DOCKER_TLS_VERIFY:1
+      - DOCKER_HOST:"tcp://docker:2376"
+
+    volumes:
+      - jenkins-docker-certs:/certs/client:ro 
+      - jenkins-data:/var/jenkins_home 

@@ -1,0 +1,39 @@
+Arguments: 
+  /home/tony/.nvm/versions/node/v16.14.0/bin/node /home/tony/.nvm/versions/node/v16.14.0/bin/yarn start
+
+PATH: 
+  /home/tony/.nvm/versions/node/v16.14.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.14.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: EISDIR: illegal operation on a directory, read
+
+npm manifest: 
+  {
+    "name": "jenkins-course",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "sudo docker-compose up",
+      "stop": "sudo docker-compose down",
+      "start:agent": "sudo docker-compose -f docker-compose-agent.yml up"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
